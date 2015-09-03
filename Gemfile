@@ -46,3 +46,20 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'foundation-rails'
+gem 'high_voltage'
+
+group :development do
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'rails_apps_pages'
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'rubocop'
+end
+
