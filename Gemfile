@@ -22,6 +22,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# ZURB Foundation on Sass/Compass
+gem 'foundation-rails'
+gem 'foundation_rails_helper'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -35,6 +38,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # Avoid repeating yourself, use pry-rails instead of copying the initializer to every rails project. 
+  gem 'pry-rails'
+
+  # pry-rescue is an implementation of "break on unhandled exception" for Ruby.
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
 end
 
 group :development do
@@ -43,5 +53,17 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Better Errors replaces the standard Rails error page with a much better and more useful error page. Read more: https://github.com/charliesome/better_errors
+  gem 'better_errors'
+
+  # Retrieve the binding of a method's caller
+  gem 'binding_of_caller', :platforms=>[:mri_21] 
+
+  # Quiet Assets turns off Rails asset pipeline log.
+  gem 'quiet_assets'
+
+  # Generates Rails application layout files for use with various front-end frameworks.
+  gem 'rails_layout'
 end
 
